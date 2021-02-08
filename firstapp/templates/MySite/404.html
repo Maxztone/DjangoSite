@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}" />
+    <title>404</title>
+</head>
+<div class="error">
+    <h1 class="display-4"> Page not found </h1>
+    <p class="lead">This page is missing. Click on pudge to go to main page</p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="{% url 'base' %}" role ="button">
+        <img src="{% static "images/pudge.png" %}" alt="">
+    </a>
+</div>
+</html>
