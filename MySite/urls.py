@@ -15,13 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework.routers import SimpleRouter
+
 from firstapp import views
+from firstapp.views import DishesViewSet
+
+router = SimpleRouter()
+router.register(r'dishes', DishesViewSet)
 
 urlpatterns = [
     path('', views.index, name="base"),
+    path('restaurant/', views.restaurant, name="restaurant"),
     path('orders/', views.orders, name="orders"),
     path('registration/', views.registration, name="registration"),
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns += router.urls
 
 handler404 = "firstapp.views.m404"
