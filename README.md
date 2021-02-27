@@ -1,2 +1,2 @@
 # DjangoSite
-None complete work, but already in progress.
+None complete work, but in progress.
